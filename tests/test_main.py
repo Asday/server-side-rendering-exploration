@@ -1,4 +1,4 @@
-import server_side_rendering_exploration  # noqa
+import api  # noqa
 
 
 def test_nothing():

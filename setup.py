@@ -9,7 +9,10 @@ setup(
     name='server_side_rendering_exploration',
     version='0.0.0',
     license='MIT',
-    description='What happens when we try to put react, django, and some manner of js server, in one repository?',
+    description=(
+        'What happens when we try to put react, django, and some manner'
+        ' of js server, in one repository?'
+    ),
     long_description='',
     author='Adam Barnes',
     author_email='sara.and.zuka@gmail.com',
@@ -25,8 +28,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
