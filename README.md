@@ -1,10 +1,13 @@
 # Developing
 
 ```shell
+nvm install 10
 pip install -r requirements-dev.txt
-./watch-flake8
+./watch
 # In a separate shell
-./watch-tests
+./manage.py runserver
+# In yed another separate shell
+npm start
 ```
 
 # Running tests
