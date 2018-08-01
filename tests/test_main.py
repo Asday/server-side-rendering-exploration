@@ -1,5 +1,2 @@
-import api  # noqa
-
-
-def test_nothing():
-    assert 1 == 1
+def test_settings_imports():
+    import api.config.settings  # noqa
