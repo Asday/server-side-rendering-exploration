@@ -11,8 +11,6 @@ pip install -r requirements-dev.txt
 npm start
 ```
 
-
-
 # Running tests
 
 ```shell
