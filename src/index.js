@@ -1,3 +1,3 @@
 import boot from './client'
 
-boot();
+boot()
