@@ -7,6 +7,7 @@ So what am I attempting here?
   * [ ] Django forwards non-matching requests to a node renderer
 * [ ] React SPA;
   * [x] React app installed and running;
+  * [ ] Redux and friends installed and running;
   * [ ] React app renders on the server;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
