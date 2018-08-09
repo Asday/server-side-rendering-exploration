@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from server_side_rendering.views import CatchAllPassThroughView
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('<path:path>', CatchAllPassThroughView.as_view()),
+    path('', CatchAllPassThroughView.as_view()),
 ]

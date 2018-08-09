@@ -5,6 +5,8 @@ So what am I attempting here?
 * [ ] Django server;
   * [x] Django installed and running;
   * [ ] Django forwards non-matching requests to a node renderer
+    * [x] Django catches non-matching requests in a single view
+    * [ ] Requests are sent elsewhere to render
 * [ ] React SPA;
   * [x] React app installed and running;
   * [ ] Redux and friends installed and running;
