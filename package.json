@@ -2,6 +2,9 @@
   "name": "server_side_rendering_exploration",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^10"
+  },
   "dependencies": {
     "lodash": "^4.17.10",
     "react": "^16.4.1",
