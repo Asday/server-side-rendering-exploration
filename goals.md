@@ -25,6 +25,7 @@ So what am I attempting here?
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
+* [ ] Oh h*ck what if we only need one terminal window to run everything?
 
 # Unknowns
 
