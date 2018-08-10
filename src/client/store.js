@@ -1,7 +1,12 @@
-import { combineReducers, createStore } from 'redux'
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
+import thunk from 'redux-thunk'
 
 import deactivators from 'reducers/deactivator'
 import theme from 'reducers/theme'
+
+const composeEnhancers = (
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+) || compose
 
 const rootReducer = combineReducers({
   deactivators,
@@ -10,5 +15,5 @@ const rootReducer = combineReducers({
 
 export default createStore(
   rootReducer,
-  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  composeEnhancers(applyMiddleware(thunk)),
 )
