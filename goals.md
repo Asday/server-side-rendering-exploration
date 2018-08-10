@@ -20,7 +20,7 @@ So what am I attempting here?
   * [ ] Helmet up and running;
   * [ ] React app renders on the server;
     * [ ] Render hook;
-    * [ ] Express(?);
+    * [ ] Express(?) might not be needed if we target `node` in webpack;
     * [ ] Something to do with webpack to make it real javascript;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
