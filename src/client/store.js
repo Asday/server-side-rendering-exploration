@@ -6,6 +6,7 @@ const rootReducer = combineReducers({
   theme,
 })
 
-const store = createStore(rootReducer)
-
-export default store
+export default createStore(
+  rootReducer,
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__(),
+)

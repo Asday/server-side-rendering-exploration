@@ -15,7 +15,7 @@ So what am I attempting here?
     * [x] reselect;
     * [x] lodash (kinda related?);
     * [ ] thunk (or saga?);
-    * [ ] dev tools and the like working (untested maybe already complete);
+    * [x] dev tools and the like working;
     * [ ] react-router or whatever it was called;
   * [ ] Helmet up and running;
   * [ ] React app renders on the server;
