@@ -10,14 +10,18 @@ So what am I attempting here?
 * [ ] React SPA;
   * [x] React app installed and running;
   * [ ] Redux and friends installed and running;
-    * [x] Redux
-    * [x] react-redux
-    * [x] reselect
-    * [x] lodash (kinda related?)
-    * [ ] thunk (or saga?)
-    * [ ] dev tools and the like working (untested maybe already complete)
-  * [ ] Helmet up and running.
+    * [x] Redux;
+    * [x] react-redux;
+    * [x] reselect;
+    * [x] lodash (kinda related?);
+    * [ ] thunk (or saga?);
+    * [ ] dev tools and the like working (untested maybe already complete);
+    * [ ] react-router or whatever it was called;
+  * [ ] Helmet up and running;
   * [ ] React app renders on the server;
+    * [ ] Render hook;
+    * [ ] Express(?);
+    * [ ] Something to do with webpack to make it real javascript;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
