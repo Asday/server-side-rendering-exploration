@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux'
 import { setMainColor } from 'actions/theming'
 import ColorPicker from 'components/ColorPicker'
 import Title from 'components/Title'
+import Deactivator from 'containers/Deactivator'
 import { mainColorSelector } from 'selectors/theming'
 
 const select = (state) => ({
@@ -30,6 +31,7 @@ export class Home extends React.Component {
       <div>
         <Title fontColor={color} />
         <ColorPicker color={color} onChoose={onChooseColor} />
+        <Deactivator id='homeDeactivator' />
       </div>
     )
   }
