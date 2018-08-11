@@ -14,7 +14,7 @@ const history = createBrowserHistory()
 
 const boot = () => {
   ReactDOM.render(
-    <Provider store={createStore(history)}>
+    <Provider store={createStore({ history })}>
       <ConnectedRouter history={history}>
         <App />
       </ConnectedRouter>
