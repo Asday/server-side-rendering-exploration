@@ -1,3 +1,9 @@
+# Server Side Rendering Exploration
+
+Nothing like a bit of experimentation.
+
+Current progress and a slightly better idea of what's going on is hanging out in the [goals](goals.md).
+
 # Developing
 
 ```shell
@@ -14,6 +20,6 @@ npm start
 # Running tests
 
 ```shell
-detox`
+detox
 npm run test
 ```
