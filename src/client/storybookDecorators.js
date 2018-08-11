@@ -8,7 +8,7 @@ import createStore from 'createStore'
 
 const actionMiddleware = () => {
   return (next) => (reduxAction) => {
-    action()(reduxAction)
+    action(reduxAction.type)(reduxAction)
 
     return next(reduxAction)
   }
