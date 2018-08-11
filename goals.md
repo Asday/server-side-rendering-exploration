@@ -20,7 +20,7 @@ So what am I attempting here?
     * [x] react-router or whatever it was called;
   * [x] Helmet up and running;
   * [ ] Storybooks;
-    * [ ] Storybook installed and working;
+    * [x] Storybook installed and working;
     * [ ] `<Link />`s work in storybooks;
 * [ ] React app renders on the server;
   * [ ] Render hook;
