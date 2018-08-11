@@ -20,7 +20,8 @@
     "reselect": "^3.0.1"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.10"
+    "@storybook/react": "^3.4.10",
+    "storybook-react-router": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

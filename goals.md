@@ -8,7 +8,7 @@ So what am I attempting here?
     * [x] Django catches non-matching requests in a single view;
     * [ ] Requests are sent elsewhere to render;
     * [ ] 404s are handled properly;
-* [ ] React SPA;
+* [x] React SPA;
   * [x] React app installed and running;
   * [x] Redux and friends installed and running;
     * [x] Redux;
@@ -19,12 +19,12 @@ So what am I attempting here?
     * [x] dev tools and the like working;
     * [x] react-router or whatever it was called;
   * [x] Helmet up and running;
-  * [ ] Storybooks;
+  * [x] Storybooks;
     * [x] Storybook installed and working;
     * [x] Containers work in Storybooks (with a decorator);
       * [x] Containers are given a store to play with in storybooks;
       * [x] Actions captured in storybooks;
-    * [ ] `<Link />`s work in storybooks;
+    * [x] `<Link />`s work in storybooks;
 * [ ] React app renders on the server;
   * [ ] Render hook;
   * [ ] Express(?) might not be needed if we target `node` in webpack;
