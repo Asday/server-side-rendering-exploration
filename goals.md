@@ -21,6 +21,9 @@ So what am I attempting here?
   * [x] Helmet up and running;
   * [ ] Storybooks;
     * [x] Storybook installed and working;
+    * [ ] Containers work in Storybooks (with a decorator);
+      * [x] Containers are given a store to play with in storybooks;
+      * [ ] Actions captured in storybooks;
     * [ ] `<Link />`s work in storybooks;
 * [ ] React app renders on the server;
   * [ ] Render hook;
