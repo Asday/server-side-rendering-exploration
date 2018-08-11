@@ -4,9 +4,10 @@ So what am I attempting here?
 
 * [ ] Django server;
   * [x] Django installed and running;
-  * [ ] Django forwards non-matching requests to a node renderer
-    * [x] Django catches non-matching requests in a single view
-    * [ ] Requests are sent elsewhere to render
+  * [ ] Django forwards non-matching requests to a node renderer;
+    * [x] Django catches non-matching requests in a single view;
+    * [ ] Requests are sent elsewhere to render;
+    * [ ] 404s are handled properly;
 * [ ] React SPA;
   * [x] React app installed and running;
   * [ ] Redux and friends installed and running;
@@ -22,6 +23,9 @@ So what am I attempting here?
     * [ ] Render hook;
     * [ ] Express(?) might not be needed if we target `node` in webpack;
     * [ ] Something to do with webpack to make it real javascript;
+  * [ ] Storybooks;
+    * [ ] Storybook installed and working;
+    * [ ] `<Link />`s work in storybooks;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
