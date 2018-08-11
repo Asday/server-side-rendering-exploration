@@ -28,7 +28,7 @@ So what am I attempting here?
 * [ ] React app renders on the server;
   * [ ] Render hook;
     * [x] Returns head, html, and state post render;
-    * [ ] Can be given an arbitrary URL to render;
+    * [x] Can be given an arbitrary URL to render;
     * [ ] Processes redirects(?);
   * [x] Express(?) might not be needed if we target `node` in webpack;
     * [x] Haha hell yeah it doesn't require it get memed on Express;

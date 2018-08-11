@@ -11,10 +11,12 @@ import App from 'components/App'
 
 import createStore from 'createStore'
 
-const history = createMemoryHistory()
-const store = createStore({ history })
+const render = (url = '/') => {
+  const history = createMemoryHistory({
+    initialEntries: [url],
+  })
+  const store = createStore({ history })
 
-const render = () => {
   const html = ReactDOMServer.renderToString(
     <Provider store={store}>
       <ConnectedRouter history={history}>
@@ -36,4 +38,6 @@ const render = () => {
   }
 }
 
-console.log(JSON.stringify(render()))
+const url = process.argv[2]
+
+console.log(JSON.stringify(render(url)))
