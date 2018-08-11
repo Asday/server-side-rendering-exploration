@@ -19,13 +19,13 @@ So what am I attempting here?
     * [x] dev tools and the like working;
     * [x] react-router or whatever it was called;
   * [ ] Helmet up and running;
-  * [ ] React app renders on the server;
-    * [ ] Render hook;
-    * [ ] Express(?) might not be needed if we target `node` in webpack;
-    * [ ] Something to do with webpack to make it real javascript;
   * [ ] Storybooks;
     * [ ] Storybook installed and working;
     * [ ] `<Link />`s work in storybooks;
+* [ ] React app renders on the server;
+  * [ ] Render hook;
+  * [ ] Express(?) might not be needed if we target `node` in webpack;
+  * [ ] Something to do with webpack to make it real javascript;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
