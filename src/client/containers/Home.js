@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Helmet } from 'react-helmet'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -29,6 +30,10 @@ export class Home extends React.Component {
 
     return (
       <div>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+
         <Title fontColor={color} />
         <ColorPicker color={color} onChoose={onChooseColor} />
         <Deactivator id='homeDeactivator' />

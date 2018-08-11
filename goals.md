@@ -18,7 +18,7 @@ So what am I attempting here?
     * [x] thunk ;
     * [x] dev tools and the like working;
     * [x] react-router or whatever it was called;
-  * [ ] Helmet up and running;
+  * [x] Helmet up and running;
   * [ ] Storybooks;
     * [ ] Storybook installed and working;
     * [ ] `<Link />`s work in storybooks;
