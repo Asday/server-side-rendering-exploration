@@ -18,3 +18,9 @@ export const deactivatorDeactivated = (id) => ({
   type: DEACTIVATOR_DEACTIVATED,
   payload: { id },
 })
+
+export const DEACTIVATOR_REGISTERED = '@deactivator/DEACTIVATOR_REGISTERED'
+export const registerDeactivator = (id) => ({
+  type: DEACTIVATOR_REGISTERED,
+  payload: { id },
+})

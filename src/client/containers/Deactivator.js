@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux'
 import {
   deactivatorActivated,
   deactivatorDeactivated,
+  registerDeactivator,
 } from 'actions/deactivator'
 import { deactivatorStateSelector } from 'selectors/deactivator'
 
@@ -18,6 +19,7 @@ const actions = (dispatch) => bindActionCreators(
   {
     onActivated: deactivatorActivated,
     onDeactivated: deactivatorDeactivated,
+    register: registerDeactivator,
   },
   dispatch,
 )
@@ -28,6 +30,22 @@ export class Deactivator extends React.Component {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     onActivated: PropTypes.func.isRequired,
     onDeactivated: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    active: false,
+  }
+
+  constructor(props) {
+    const {
+      id,
+      register,
+    } = props
+
+    super(props)
+
+    register(id)
   }
 
   onChange = ({ target: { checked } }) => {
