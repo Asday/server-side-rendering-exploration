@@ -15,7 +15,7 @@ So what am I attempting here?
     * [x] react-redux;
     * [x] reselect;
     * [x] lodash (kinda related?);
-    * [x] thunk ;
+    * [x] thunk;
     * [x] dev tools and the like working;
     * [x] react-router or whatever it was called;
   * [x] Helmet up and running;
