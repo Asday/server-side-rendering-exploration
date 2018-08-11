@@ -10,14 +10,14 @@ So what am I attempting here?
     * [ ] 404s are handled properly;
 * [ ] React SPA;
   * [x] React app installed and running;
-  * [ ] Redux and friends installed and running;
+  * [x] Redux and friends installed and running;
     * [x] Redux;
     * [x] react-redux;
     * [x] reselect;
     * [x] lodash (kinda related?);
     * [x] thunk ;
     * [x] dev tools and the like working;
-    * [ ] react-router or whatever it was called;
+    * [x] react-router or whatever it was called;
   * [ ] Helmet up and running;
   * [ ] React app renders on the server;
     * [ ] Render hook;
