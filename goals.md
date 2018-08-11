@@ -27,15 +27,25 @@ So what am I attempting here?
     * [x] `<Link />`s work in storybooks;
 * [ ] React app renders on the server;
   * [ ] Render hook;
-  * [ ] Express(?) might not be needed if we target `node` in webpack;
+    * [x] Returns head, html, and state post render;
+    * [ ] Can be given an arbitrary URL to render;
+    * [ ] Processes redirects(?);
+  * [x] Express(?) might not be needed if we target `node` in webpack;
+    * [x] Haha hell yeah it doesn't require it get memed on Express;
   * [ ] Something to do with webpack to make it real javascript;
+    * [x] Webpack configuration and requirements to compile to node js;
+    * [ ] Any unknown stuff I've yet to come across;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
 * [ ] Oh h*ck what if we only need one terminal window to run everything?
 
-# Unknowns
+# Knowns
 
-* How do I render React stuff on the server?
-* Can I use just `./manage.py runserver` and visit [localhost:8000](http://localhost:8000) to get to the _current_ React app?  Or will I still need to run `npm start` and go to [localhost:3000](http://localhost:3000)?
-* How will this work in "production"?
+React stuff will be rendered on the server by the Django server shelling out to Node, running a render script, and injecting the returned JSON into a template in the appropriate places.
+
+This means there will be no need to run the react dev server - simply going to localhost:8000 will forward requests to the server-side rendering javascript.
+
+THAT means we initially lose some nice features.  Hot reload is gone, (if it was there in the first place), automatic reloading is gone, automatic recompilation is gone, linting is gone...
+
+None of that matters in production though.
