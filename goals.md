@@ -8,6 +8,8 @@ So what am I attempting here?
     * [x] Django catches non-matching requests in a single view;
     * [x] Requests are sent elsewhere to render;
     * [ ] 404s are handled properly, (returning an actual 404 status code);
+      * [ ] `<Route />`s which are always NotFound return 404;
+      * [ ] `<Route />`s which are sometimes NotFound return 404 sometimes;
 * [x] React SPA;
   * [x] React app installed and running;
   * [x] Redux and friends installed and running;
