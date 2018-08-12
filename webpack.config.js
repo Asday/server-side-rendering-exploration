@@ -1,12 +1,11 @@
+const defaults = require('lodash').defaults
 const path = require('path')
 
-module.exports = {
-  entry: './src/client/render.js',
+const baseConfig = {
   output: {
-    filename: 'render.js',
-    path: path.resolve(__dirname, 'build'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'src/api/server_side_rendering/static/dist'),
   },
-  target: 'node',
   resolve: {
     modules: [
       'node_modules',
@@ -30,3 +29,22 @@ module.exports = {
     ],
   }
 }
+
+const renderConfig = defaults(
+  {
+    entry: { render: './src/client/render.js' },
+    target: 'node',
+  },
+  baseConfig,
+)
+
+const bundleConfig = defaults(
+  {
+    entry: { bundle: './src/index.js' },
+  },
+  baseConfig,
+)
+
+debugger
+
+module.exports = [ renderConfig, bundleConfig ]

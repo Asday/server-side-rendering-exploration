@@ -26,10 +26,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build:bundle": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p  9001 -c storybook",
-    "build:render": "NODE_ENV=production webpack --config webpack.config.js"
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
   }
 }

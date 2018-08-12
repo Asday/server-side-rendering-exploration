@@ -1,10 +1,22 @@
+{% load staticfiles %}
+
 <!doctype html>
-<html>
+<html {{ html_attributes|safe }}>
 <head>
-  <title>Title</title>
+  {{ base|safe }}
+  {{ title|safe }}
+  {{ meta|safe }}
+  {{ link|safe }}
+  {{ style|safe }}
+  {{ script|safe }}
+  {{ noscript|safe }}
 </head>
-<body>
-  <h1>Body</h1>
-  <pre>{{ path }}</pre>
+<body {{ body_attributes }}>
+  <div id="root">{{ html|safe }}</div>
+
+  <script>
+    window.__REDUX_STATE__ = {{ state|safe }}
+  </script>
+  <script src="{% static 'dist/bundle.js' %}"></script>
 </body>
 </html>

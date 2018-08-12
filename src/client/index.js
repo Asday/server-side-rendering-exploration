@@ -13,13 +13,20 @@ import createStore from 'createStore'
 const history = createBrowserHistory()
 
 const boot = () => {
-  ReactDOM.render(
-    <Provider store={createStore({ history })}>
+  const element = document.getElementById('root')
+  const hydRender = element.hasChildNodes()
+    ? ReactDOM.hydrate
+    : ReactDOM.render
+
+  const initialState = window.__REDUX_STATE__ || undefined
+
+  hydRender(
+    <Provider store={createStore({ history, initialState })}>
       <ConnectedRouter history={history}>
         <App />
       </ConnectedRouter>
     </Provider>,
-    document.getElementById('root'),
+    element,
   )
   registerServiceWorker()
 }

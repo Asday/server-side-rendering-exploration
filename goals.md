@@ -6,7 +6,8 @@ So what am I attempting here?
   * [x] Django installed and running;
   * [ ] Django forwards non-matching requests to a node renderer;
     * [x] Django catches non-matching requests in a single view;
-    * [ ] Requests are sent elsewhere to render;
+    * [x] Requests are sent elsewhere to render;
+    * [ ] Asynchronous requests within react are waited on before rendering;
     * [ ] 404s are handled properly;
 * [x] React SPA;
   * [x] React app installed and running;
@@ -32,9 +33,9 @@ So what am I attempting here?
     * [ ] Processes redirects(?);
   * [x] Express(?) might not be needed if we target `node` in webpack;
     * [x] Haha hell yeah it doesn't require it get memed on Express;
-  * [ ] Something to do with webpack to make it real javascript;
+  * [x] Something to do with webpack to make it real javascript;
     * [x] Webpack configuration and requirements to compile to node js;
-    * [ ] Any unknown stuff I've yet to come across;
+    * [x] Any unknown stuff I've yet to come across;
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`

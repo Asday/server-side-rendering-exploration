@@ -14,8 +14,13 @@ const rootReducer = combineReducers({
   theme,
 })
 
-export default ({ history, extraMiddleware = [] }) => createStore(
+export default ({
+  history,
+  extraMiddleware = [],
+  initialState,
+}) => createStore(
   connectRouter(history)(rootReducer),
+  initialState,
   composeEnhancers(applyMiddleware(
     routerMiddleware(history),
     thunk,

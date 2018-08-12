@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 
 import { ConnectedRouter } from 'connected-react-router'
 import { createMemoryHistory } from 'history'
-import { map } from 'lodash'
+import { merge, reduce } from 'lodash'
 import Helmet from 'react-helmet'
 import { Provider } from 'react-redux'
 
@@ -11,11 +11,11 @@ import App from 'components/App'
 
 import createStore from 'createStore'
 
-const render = (url = '/') => {
+const render = (url = '/', initialState) => {
   const history = createMemoryHistory({
     initialEntries: [url],
   })
-  const store = createStore({ history })
+  const store = createStore({ history, initialState })
 
   const html = ReactDOMServer.renderToString(
     <Provider store={store}>
@@ -26,18 +26,22 @@ const render = (url = '/') => {
   )
 
   const state = store.getState()
-  const head = map(
+  const helmet = reduce(
     Helmet.renderStatic(),
-    (element, key) => ({ [key]: element.toString() }),
+    (accumulator, element, name) => (
+      merge(accumulator, {[name]: element.toString() })
+    ),
+    {},
   )
 
   return {
-    head,
+    helmet,
     html,
     state,
   }
 }
 
 const url = process.argv[2]
+const initialState = !!process.argv[3] && JSON.parse(process.argv[3])
 
-console.log(JSON.stringify(render(url)))
+console.log(JSON.stringify(render(url, initialState)))
