@@ -3,7 +3,6 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 
 import deactivators from 'models/deactivators/reducers'
-import notFound from 'models/notFound/reducers'
 import theme from 'models/theming/reducers'
 
 const composeEnhancers = (
@@ -12,7 +11,6 @@ const composeEnhancers = (
 
 const rootReducer = combineReducers({
   deactivators,
-  notFound,
   theme,
 })
 
@@ -21,7 +19,7 @@ export default ({
   extraMiddleware = [],
   initialState,
 }) => createStore(
-  connectRouter(history)(rootReducer),
+  !!history ? connectRouter(history)(rootReducer) : rootReducer,
   initialState,
   composeEnhancers(applyMiddleware(
     routerMiddleware(history),

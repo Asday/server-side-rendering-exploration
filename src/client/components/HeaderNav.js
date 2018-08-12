@@ -7,6 +7,7 @@ export default class HeaderNav extends React.Component {
     <header>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
+      <Link to="/nowhere">404</Link>
     </header>
   )
 }

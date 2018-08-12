@@ -1,27 +1,24 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-import { ConnectedRouter } from 'connected-react-router'
-import { createMemoryHistory } from 'history'
 import { merge, reduce } from 'lodash'
 import Helmet from 'react-helmet'
 import { Provider } from 'react-redux'
+import { StaticRouter } from 'react-router'
 
 import App from 'components/App'
 
 import createStore from 'createStore'
 
 const render = (url = '/', initialState) => {
-  const history = createMemoryHistory({
-    initialEntries: [url],
-  })
-  const store = createStore({ history, initialState })
+  const store = createStore({ initialState })
+  const context = {}
 
   const html = ReactDOMServer.renderToString(
     <Provider store={store}>
-      <ConnectedRouter history={history}>
+      <StaticRouter location={url} context={context}>
         <App />
-      </ConnectedRouter>
+      </StaticRouter>
     </Provider>
   )
 
@@ -38,6 +35,7 @@ const render = (url = '/', initialState) => {
     helmet,
     html,
     state,
+    context,
   }
 }
 
