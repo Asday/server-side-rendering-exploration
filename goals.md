@@ -7,8 +7,7 @@ So what am I attempting here?
   * [ ] Django forwards non-matching requests to a node renderer;
     * [x] Django catches non-matching requests in a single view;
     * [x] Requests are sent elsewhere to render;
-    * [ ] Asynchronous requests within react are waited on before rendering;
-    * [ ] 404s are handled properly;
+    * [ ] 404s are handled properly, (returning an actual 404 status code);
 * [x] React SPA;
   * [x] React app installed and running;
   * [x] Redux and friends installed and running;
@@ -31,6 +30,7 @@ So what am I attempting here?
     * [x] Returns head, html, and state post render;
     * [x] Can be given an arbitrary URL to render;
     * [ ] Processes redirects(?);
+    * [ ] Asynchronous requests within react are waited on before rendering;
   * [x] Express(?) might not be needed if we target `node` in webpack;
     * [x] Haha hell yeah it doesn't require it get memed on Express;
   * [x] Something to do with webpack to make it real javascript;
@@ -39,7 +39,23 @@ So what am I attempting here?
 * [x] All useful commands runnable from the root directory;
   * [x] `./manage.py ...`
   * [x] `npm start`
+* [ ] Improve webpack configuration;
+  * [ ] Automatic recompilation and reload on code change;
+  * [ ] Linting;
 * [ ] Oh h*ck what if we only need one terminal window to run everything?
+  * [ ] Something that can run many things in parallel nicely like docker-compose does;
+    * [ ] Output from each task must be easily readable;
+    * [ ] Hotkeys to kick off tasks (like recompilation after installing a package);
+    * [ ] Highest possible signal-to-noise ratio;
+  * [ ] Everything:
+    * [ ] Storybook;
+    * [ ] Webpack automatic re-doeverything-er;
+    * [ ] Django server;
+    * [ ] flake8;
+    * [ ] detox;
+    * [ ] `npm run test`;
+  * [ ] Standalone binary that reads config files to set up;
+  * [ ] This is looking huge maybe it's its own project...
 
 # Knowns
 
