@@ -4,7 +4,7 @@ import {
   DEACTIVATOR_ACTIVATED,
   DEACTIVATOR_DEACTIVATED,
   DEACTIVATOR_REGISTERED,
-} from 'actions/deactivator'
+} from 'models/deactivators/actions'
 
 const operateOn = (array, locator, operator) => map(
   array,

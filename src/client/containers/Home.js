@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { setMainColor } from 'actions/theming'
 import ColorPicker from 'components/ColorPicker'
 import Title from 'components/Title'
 import Deactivator from 'containers/Deactivator'
-import { mainColorSelector } from 'selectors/theming'
+import { setMainColor } from 'models/theming/actions'
+import { mainColorSelector } from 'models/theming/selectors'
 
 const select = (state) => ({
   color: mainColorSelector(state),

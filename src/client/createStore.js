@@ -2,8 +2,8 @@ import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 
-import deactivators from 'reducers/deactivator'
-import theme from 'reducers/theme'
+import deactivators from 'models/deactivators/reducers'
+import theme from 'models/theming/reducers'
 
 const composeEnhancers = (
   typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

@@ -8,8 +8,8 @@ import {
   deactivatorActivated,
   deactivatorDeactivated,
   registerDeactivator,
-} from 'actions/deactivator'
-import { deactivatorStateSelector } from 'selectors/deactivator'
+} from 'models/deactivators/actions'
+import { deactivatorStateSelector } from 'models/deactivators/selectors'
 
 const select = (state, { id }) => ({
   active: deactivatorStateSelector(state)(id),

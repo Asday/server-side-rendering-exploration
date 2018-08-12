@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import { SET_MAIN_COLOR } from 'actions/theming'
+import { SET_MAIN_COLOR } from 'models/theming/actions'
 
 const initialMainColor = '#000000'
 const mainColor = (state=initialMainColor, { type, payload }) => {
