@@ -42,6 +42,6 @@ const render = (url = '/', initialState) => {
 }
 
 const url = process.argv[2]
-const initialState = !!process.argv[3] && JSON.parse(process.argv[3])
+const initialState = !!process.argv[3] ? JSON.parse(process.argv[3]) : {}
 
 console.log(JSON.stringify(render(url, initialState)))
